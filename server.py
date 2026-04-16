@@ -201,7 +201,7 @@ async def main() -> None:
     wyoming_info = Info(
         tts=[
             TtsProgram(
-                name="sherpa-onnx",
+                name="sherpa-tts",
                 description="sherpa-onnx offline TTS (Cantonese VITS)",
                 version="1.0.0",
                 attribution=Attribution(
