@@ -155,7 +155,7 @@ async def main() -> None:
     )
     parser.add_argument(
         "--language",
-        default="yue",
+        default="yue-HK",
         help="BCP-47 language tag (default: yue for Cantonese)",
     )
     parser.add_argument(
@@ -201,7 +201,7 @@ async def main() -> None:
     wyoming_info = Info(
         tts=[
             TtsProgram(
-                name="sherpa-onnx",
+                name="sherpa-tts",
                 description="sherpa-onnx offline TTS (Cantonese VITS)",
                 version="1.0.0",
                 attribution=Attribution(
@@ -212,10 +212,10 @@ async def main() -> None:
                 voices=[
                     TtsVoice(
                         name=args.voice_name,
-                        description="Cantonese VITS (xiaomaiiwn)",
+                        description="Cantonese VITS",
                         attribution=Attribution(
                             name="csukuangfj",
-                            url="https://huggingface.co/csukuangfj/vits-cantonese-hf-xiaomaiiwn",
+                            url="https://huggingface.co/csukuangfj/vits-melo-tts-zh_en",
                         ),
                         installed=True,
                         languages=[args.language],

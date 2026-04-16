@@ -6,9 +6,9 @@ import sys
 from pathlib import Path
 
 MODEL_DIR = Path("/model")
-REPO_ID = "csukuangfj/vits-cantonese-hf-xiaomaiiwn"
+REPO_ID = "csukuangfj/vits-melo-tts-zh_en"
 FILES = [
-    "vits-cantonese-hf-xiaomaiiwn.onnx",
+    "model.onnx",
     "lexicon.txt",
     "tokens.txt",
     "rule.fst",
@@ -20,7 +20,7 @@ def main() -> None:
     MODEL_DIR.mkdir(parents=True, exist_ok=True)
 
     # Check if already downloaded (skip if the ONNX file is present)
-    onnx_path = MODEL_DIR / "vits-cantonese-hf-xiaomaiiwn.onnx"
+    onnx_path = MODEL_DIR / "model.onnx"
     if onnx_path.exists() and onnx_path.stat().st_size > 1_000_000:
         print(f"Model already present at {MODEL_DIR}, skipping download.")
         return
