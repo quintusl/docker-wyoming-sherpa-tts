@@ -1,6 +1,6 @@
 # wyoming-sherpa-tts
 
-A Docker image that runs a **Wyoming TTS server** backed by [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx), using the Cantonese VITS model [`csukuangfj/vits-melo-tts-zh_en`](https://huggingface.co/csukuangfj/vits-melo-tts-zh_en) from HuggingFace.
+A Docker image that runs a **Wyoming TTS server** backed by [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx), using the Cantonese VITS model [`csukuangfj/vits-cantonese-hf-xiaomaiiwn`](https://huggingface.co/csukuangfj/vits-cantonese-hf-xiaomaiiwn) from HuggingFace.
 
 The [Wyoming protocol](https://github.com/rhasspy/wyoming) is natively supported by Home Assistant's [Wyoming integration](https://www.home-assistant.io/integrations/wyoming).
 
@@ -56,7 +56,7 @@ On first start the container downloads the model from HuggingFace into the `/mod
 
 | Item | Detail |
 |---|---|
-| HuggingFace repo | [`csukuangfj/vits-melo-tts-zh_en`](https://huggingface.co/csukuangfj/vits-melo-tts-zh_en) |
+| HuggingFace repo | [`csukuangfj/vits-cantonese-hf-xiaomaiiwn`](https://huggingface.co/csukuangfj/vits-cantonese-hf-xiaomaiiwn) |
 | Architecture | VITS (single speaker) |
 | Language | Cantonese (yue) |
 | Sample rate | 22 050 Hz |
