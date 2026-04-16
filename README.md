@@ -1,4 +1,4 @@
-# wyoming-sherpa-tts-cantonese
+# wyoming-sherpa-tts
 
 A Docker image that runs a **Wyoming TTS server** backed by [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx), using the Cantonese VITS model [`csukuangfj/vits-melo-tts-zh_en`](https://huggingface.co/csukuangfj/vits-melo-tts-zh_en) from HuggingFace.
 
@@ -10,17 +10,17 @@ The [Wyoming protocol](https://github.com/rhasspy/wyoming) is natively supported
 
 ```bash
 # Build
-docker build -t wyoming-sherpa-tts-cantonese .
+docker build -t wyoming-sherpa-tts .
 
 # Run (model is downloaded from HuggingFace on first start, ~114 MB)
 docker run -d \
   --name wyoming-sherpa-tts \
   -p 10300:10300 \
   -v sherpa-tts-model:/model \
-  wyoming-sherpa-tts-cantonese
+  quintux/wyoming-sherpa-tts:latest
 ```
 
-On first start the container downloads the Cantonese model from HuggingFace into the `/model` volume. Subsequent starts reuse the cached model.
+On first start the container downloads the model from HuggingFace into the `/model` volume. Subsequent starts reuse the cached model.
 
 ---
 
@@ -76,7 +76,7 @@ docker run -d \
   -e MODEL_DIR=/custom-model \
   -e VOICE_NAME=my-voice \
   -e LANGUAGE=zh \
-  wyoming-sherpa-tts-cantonese
+  quintux/wyoming-sherpa-tts:latest
 ```
 
 The directory must contain at minimum:
